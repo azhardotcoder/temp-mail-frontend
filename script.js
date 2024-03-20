@@ -1,5 +1,5 @@
 let res_msg = document.getElementById("res-msg");
-let API_KEY = "d1c0735d43mshee1e23f1b3198e4p178733jsn71164376e8e3";
+let API_KEY = "d1c0735d43mshee1e23f1b3198e4p178733jsn71164376e8e32";
 let API_HOST = "temp-mail44.p.rapidapi.com";
 const newEmailURL = "https://temp-mail-aewa.onrender.com/email";
 const readEmailURL = "https://temp-mail-aewa.onrender.com";
@@ -22,9 +22,10 @@ async function emailChangeHandler() {
     let newEmail = await response.json();
 
     bindData(newEmail);
-  } catch (e) {
-    console.log(error);
-    res_msg.innerText = error.message;
+  } catch (error) {
+    res_msg.innerText = "Something went wrong, please try again later";
+    console.log(error.message);
+    
   }
 }
 
@@ -48,8 +49,8 @@ async function getEmailHandler() {
     res_msg.innerText = "";
     bindData(emails);
   } catch (error) {
+    res_msg.innerText = "Something went wrong, please try again later";
     console.log(error);
-    res_msg.innerText = error.message;
   }
 }
 function bindData(kuch) {
@@ -64,7 +65,9 @@ function bindData(kuch) {
     });
   } else if (kuch && typeof kuch === "object") {
     localStorage.setItem("email", kuch.email);
+    res_msg.innerText = "";
     document.getElementById("email").innerText = localStorage.getItem("email");
+    
   }
 }
 document.getElementById("copy").addEventListener("click", () => {

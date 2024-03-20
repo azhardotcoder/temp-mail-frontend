@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Inter:wght@100..900&family=Nanum+Myeongjo:wght@400;700;800&family=Ojuju:wght@200..800&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -7,25 +8,30 @@
 body{
     width: 100%;
     height: 100vh;
-    background-color: aliceblue;
+    background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "Inter", sans-serif;
 }
 .container{
     width: 700px;
-    height: 500px;
+    height: 550px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(134, 206, 165);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(128, 128, 128, 0.179);
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 
 }
 
 #email{
     /* background-color: black; */
     color: rgb(0, 0, 0);
+    
 }
 button{
     background-color: black;
@@ -46,32 +52,66 @@ button:nth-child(2){
     padding-left: 30px;
     padding-top: 10px;
   }
-h1{
-    color: white;
-    width: 75%;
-}
+
 .email-section{
     width: 90%;
-    margin: 20px;
+    margin: 0 20px;
     
 }
 .email-section h1{
     color: black;
 }
 #email-content{
-    background-color: rgb(181, 218, 181);
+    background-color: #78787827;
     width: 100%;
     min-height: 200px;
     border-radius: 10px;
+    margin-top: 10px;
     
 }
 .email-copy img{
-    width: 30px;
+    width: 25px;
     cursor: pointer;
+    filter: grayscale(900)
 }
 .email-copy{
     width: 75%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
+}
+#heading{
+    font-size: 30px;
+    color: rgb(0, 221, 162);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    background-color: #7878780d;
+    width: 80%;
+    text-align: center;
+    -webkit-text-stroke: 1px black; 
+}
+
+
+@media screen and (max-width: 700px){
+    .container{
+        width: 100%;
+        height: 100%;
+    }
+    .email-section{
+        width: 100%;
+    }
+    .email-copy{
+        width: 100%;
+    }
+    .email-content{
+        margin: 0 10px;
+    }
+    #email{
+        font-size: 15px;
+    }
+    #heading{
+        font-size: 15px;
+    }
 }
