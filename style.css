@@ -24,8 +24,8 @@ body{
 }
 
 #email{
-    background-color: black;
-    color: white;
+    /* background-color: black; */
+    color: rgb(0, 0, 0);
 }
 button{
     background-color: black;
@@ -33,18 +33,45 @@ button{
     padding: 10px;
     font-size: 15px;
     border: none;
+    border-radius: 5px;
     margin-top: 10px;
+    cursor: none;
+
+    
 }
-  p{
-    margin-top: 20px;
-    background-color: black;
-    color: white;
-    margin-left: 6rem;
+button:nth-child(2){
+    margin-left: 20px;
 }
+  .email-content{
+    padding-left: 30px;
+    padding-top: 10px;
+  }
 h1{
     color: white;
+    width: 75%;
+}
+.email-section{
+    width: 90%;
+    margin: 20px;
+    
+}
+.email-section h1{
+    color: black;
 }
 #email-content{
-    background-color: green;
-    width: 400px;
+    background-color: rgb(181, 218, 181);
+    width: 100%;
+    min-height: 200px;
+    border-radius: 10px;
+    
+}
+.email-copy img{
+    width: 30px;
+    cursor: pointer;
+}
+.email-copy{
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
