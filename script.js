@@ -1,5 +1,6 @@
 let res_msg = document.getElementById("res-msg");
-let API_KEY = "d1c0735d43mshee1e23f1b3198e4p178733jsn71164376e8e32";
+//let API_KEY = "d1c0735d43mshee1e23f1b3198e4p178733jsn71164376e8e32";
+let API_KEY = "209a25286emshb974060d119f2f7p1e09a4jsn20911ab7203c";
 let API_HOST = "temp-mail44.p.rapidapi.com";
 const newEmailURL = "https://temp-mail-aewa.onrender.com/email";
 const readEmailURL = "https://temp-mail-aewa.onrender.com";
